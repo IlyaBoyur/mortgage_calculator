@@ -5,13 +5,17 @@ from django.urls import include, path
 from drf_spectacular.views import SpectacularSwaggerView, SpectacularAPIView
 
 
-from .routers import router
-
 urlpatterns = [
-    path("admin/", admin.site.urls),
-    path("api/", include(router.urls)),
-    path("api/schema/", SpectacularAPIView.as_view(), name="schema"),
-    path("api/docs/", SpectacularSwaggerView.as_view(url_name="schema"), name="docs"),
+    path("admin/",
+         admin.site.urls),
+    path("api/",
+         include("mortgage_calculator.urls")),
+    path("api/schema/",
+         SpectacularAPIView.as_view(),
+         name="schema"),
+    path("api/docs/",
+         SpectacularSwaggerView.as_view(url_name="schema"),
+         name="docs"),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
