@@ -1,4 +1,5 @@
-from django_filters import NumberFilter, OrderingFilter, FilterSet
+from django_filters import FilterSet, NumberFilter, OrderingFilter
+
 from .utils import calculate_debt
 
 

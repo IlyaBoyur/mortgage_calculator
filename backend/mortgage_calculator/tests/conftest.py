@@ -1,6 +1,7 @@
 import pytest
-from mortgage_calculator.models import MortgageOffer
 from rest_framework.test import APIClient
+
+from mortgage_calculator.models import MortgageOffer
 
 
 @pytest.fixture()

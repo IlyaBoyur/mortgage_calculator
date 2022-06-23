@@ -1,8 +1,10 @@
+from decimal import Decimal
+
 import pytest
 from django.urls import reverse
-from mortgage_calculator.models import MortgageOffer
 from rest_framework import status
-from decimal import Decimal
+
+from mortgage_calculator.models import MortgageOffer
 from mortgage_calculator.utils import calculate_payment
 
 PRICE = 12_000_000

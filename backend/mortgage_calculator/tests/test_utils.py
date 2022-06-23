@@ -1,5 +1,6 @@
 import pytest
-from mortgage_calculator.utils import calculate_payment, calculate_debt
+
+from mortgage_calculator.utils import calculate_debt, calculate_payment
 
 
 @pytest.mark.parametrize(

@@ -1,6 +1,7 @@
 import os
 import sys
 import unittest
+
 import faker.config
 from django.utils.translation import gettext_lazy as _
 

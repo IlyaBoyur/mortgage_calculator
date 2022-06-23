@@ -1,7 +1,8 @@
 from rest_framework import serializers
+
 from .models import MortgageOffer
-from .validators import RangeValidator
 from .utils import calculate_payment
+from .validators import RangeValidator
 
 ERROR_PAYMENT_RANGE = (
     'Минимальная сумма кредита больше максимальной: {min} > {max}'
