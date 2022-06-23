@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     "drf_spectacular",
     # apps
     # "images.apps.ImagesConfig",
+    'mortgage_calculator',
 ]
 
 MIDDLEWARE = [
@@ -112,6 +113,7 @@ MEDIA_URL = "/m/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 FILE_UPLOAD_DIRECTORY_PERMISSIONS = 0o755
 FILE_UPLOAD_PERMISSIONS = 0o644
+
 
 # Debug Toolbar
 def show_toolbar_callback(_):
