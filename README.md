@@ -70,3 +70,24 @@ docker-compose exec backend sh
 О выполнении задания можно уведомить по почте a.kuzmenko@idaproject.com
 
 Так же можете задать вопросы лично мне (Telegram): @egor1344
+
+----
+
+
+####  Задание выполнено! Как проверить работу приложения локально:
+
+1. Подготовить рабочее пространство - выполните в корневой папке проекта:
+```bash
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+
+2. Запустить тесты
+```bash
+pytest backend
+```
+
+#### Авторы
+
+[Илья Боюр](https://github.com/IlyaBoyur)
