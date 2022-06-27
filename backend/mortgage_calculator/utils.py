@@ -1,4 +1,5 @@
 import math
+from sys import argv
 
 
 def calculate_payment(price, initial_fee, term, yearly_rate):
@@ -29,3 +30,15 @@ def calculate_debt(price, initial_fee):
     f - initial fee in %
     """
     return math.ceil(price - price * 0.01 * initial_fee)
+
+
+if __name__ == '__main__':
+    print(f'Ипотека')
+    print('---------------')
+    print(f'Цена квартиры, ₽: {int(argv[1]):,}')
+    print(f'Первоначальный взнос, %: {argv[2]}')
+    print(f'Срок, лет: {argv[3]}')
+    print(f'Ставка, %: {argv[4]}')
+    print('---------------')
+    print(f'Ежемесячный платёж, ₽:'
+          f'{calculate_payment(*(float(value) for value in argv[1:]))}')
